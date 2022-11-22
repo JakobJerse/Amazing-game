@@ -1,0 +1,170 @@
+{
+  "nodes": [
+    {
+      "type": "camera",
+      "translation": [
+        0,
+        1,
+        0
+      ],
+      "aabb": {
+        "min": [
+          -0.2,
+          -0.2,
+          -0.2
+        ],
+        "max": [
+          0.2,
+          0.2,
+          0.2
+        ]
+      },
+      "aspect": 1,
+      "fov": 1.5,
+      "near": 0.01,
+      "far": 100
+    },
+    {
+      "type": "object",
+      "name": "object1",
+      "mesh": 0,
+      "texture": 1,
+      "aabb": {
+        "min": [
+          -1,
+          -1,
+          -1
+        ],
+        "max": [
+          1,
+          1,
+          1
+        ]
+      },
+      "translation": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "type": "object",
+      "name": "object2",
+      "mesh": 1,
+      "texture": 0,
+      "aabb": {
+        "min": [
+          -1,
+          -1,
+          -1
+        ],
+        "max": [
+          1,
+          1,
+          1
+        ]
+      },
+      "translation": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "type": "object",
+      "name": "object3",
+      "mesh": 2,
+      "texture": 0,
+      "aabb": {
+        "min": [
+          -1,
+          -1,
+          -1
+        ],
+        "max": [
+          1,
+          1,
+          1
+        ]
+      },
+      "translation": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "type": "object",
+      "name": "object4",
+      "mesh": 3,
+      "texture": 1,
+      "aabb": {
+        "min": [
+          -1,
+          -1,
+          -1
+        ],
+        "max": [
+          1,
+          1,
+          1
+        ]
+      },
+      "translation": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    }
+  ],
+  "textures": [
+    "../../common/images/crate-diffuse.png",
+    "../../common/images/creepytiles.png"
+  ],
+  "meshes": [
+    "../../common/models/1.json",
+    "../../common/models/2.json",
+    "../../common/models/3.json",
+    "../../common/models/4.json"
+  ]
+}
