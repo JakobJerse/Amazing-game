@@ -87,7 +87,7 @@ export class Renderer {
         const indices = model.indices.length;
         gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, gl.createBuffer());
         gl.bufferData(gl.ELEMENT_ARRAY_BUFFER, new Uint32Array(model.indices), gl.STATIC_DRAW);
-        // jebo vam pas mater uint16array
+        // uint16 array Č)
         return { vao, indices };
     }
 
@@ -95,6 +95,8 @@ export class Renderer {
         const gl = this.gl;
         return WebGL.createTexture(gl, {
             image: texture,
+            wrapS: gl.REPEAT,
+            wrapT: gl.REPEAT,
             min: gl.NEAREST,
             mag: gl.NEAREST
         });
