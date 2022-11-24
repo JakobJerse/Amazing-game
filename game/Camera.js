@@ -57,17 +57,25 @@ export class Camera extends Node {
                 9.5,
                 1,
                 20
-              ]
+            ]
         }
         if (this.keys['KeyT']) {
             c.translation = [
                 -3,
                 1,
-                -14
-              ]
+                -14.6
+            ]
         }
-
-        console.log(c.translation)
+        if (this.keys['KeyP']) {
+            console.log(c.translation)
+        }
+        if (this.keys['KeyC']) {
+            c.translation = [
+                16.47,
+                1,
+                11.46
+            ]
+        }
 
         // 2: update velocity
         vec3.scaleAndAdd(c.velocity, c.velocity, acc, dt * c.acceleration);

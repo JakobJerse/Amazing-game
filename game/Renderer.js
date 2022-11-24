@@ -87,7 +87,7 @@ export class Renderer {
         const indices = model.indices.length;
         gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, gl.createBuffer());
         gl.bufferData(gl.ELEMENT_ARRAY_BUFFER, new Uint32Array(model.indices), gl.STATIC_DRAW);
-        // uint16 array Č)
+        // uint16 array
         return { vao, indices };
     }
 
