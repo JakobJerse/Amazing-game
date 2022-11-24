@@ -118,5 +118,5 @@ map = { vertices: vertices, normals: normals, texsels: texsels, objects: objects
 const motherString = JSON.stringify(map)
 //console.log(motherString)
 
-fs.writeFileSync('fakof.json', motherString);
+fs.writeFileSync('cube3.json', motherString);
 //fs.writeFileSync('hatersGonnaHatePotatosGonnaPotate.json', JSON.stringify({materiali:stevilkaMateriala}));

@@ -26,9 +26,9 @@
     },
     {
       "type": "object",
-      "name": "object1",
+      "name": "floor",
       "mesh": 0,
-      "texture": 1,
+      "texture": 2,
       "aabb": {
         "min": [
           -1,
@@ -59,9 +59,9 @@
     },
     {
       "type": "object",
-      "name": "object2",
+      "name": "wall-U-2",
       "mesh": 1,
-      "texture": 0,
+      "texture": 4,
       "aabb": {
         "min": [
           -1,
@@ -92,8 +92,767 @@
     },
     {
       "type": "object",
-      "name": "object3",
+      "name": "wall3",
       "mesh": 2,
+      "texture": 4,
+      "aabb": {
+        "min": [
+          -1,
+          -1,
+          -1
+        ],
+        "max": [
+          1,
+          1,
+          1
+        ]
+      },
+      "translation": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "type": "object",
+      "name": "wall4",
+      "mesh": 3,
+      "texture": 4,
+      "aabb": {
+        "min": [
+          -1,
+          -1,
+          -1
+        ],
+        "max": [
+          1,
+          1,
+          1
+        ]
+      },
+      "translation": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "type": "object",
+      "name": "wall5",
+      "mesh": 4,
+      "texture": 4,
+      "aabb": {
+        "min": [
+          -1,
+          -1,
+          -1
+        ],
+        "max": [
+          1,
+          1,
+          1
+        ]
+      },
+      "translation": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "type": "object",
+      "name": "wall6",
+      "mesh": 5,
+      "texture": 4,
+      "aabb": {
+        "min": [
+          -1,
+          -1,
+          -1
+        ],
+        "max": [
+          1,
+          1,
+          1
+        ]
+      },
+      "translation": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "type": "object",
+      "name": "wall7",
+      "mesh": 6,
+      "texture": 4,
+      "aabb": {
+        "min": [
+          -1,
+          -1,
+          -1
+        ],
+        "max": [
+          1,
+          1,
+          1
+        ]
+      },
+      "translation": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "type": "object",
+      "name": "wall8",
+      "mesh": 7,
+      "texture": 4,
+      "aabb": {
+        "min": [
+          -1,
+          -1,
+          -1
+        ],
+        "max": [
+          1,
+          1,
+          1
+        ]
+      },
+      "translation": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "type": "object",
+      "name": "wall9",
+      "mesh": 8,
+      "texture": 4,
+      "aabb": {
+        "min": [
+          -1,
+          -1,
+          -1
+        ],
+        "max": [
+          1,
+          1,
+          1
+        ]
+      },
+      "translation": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "type": "object",
+      "name": "wall10",
+      "mesh": 9,
+      "texture": 4,
+      "aabb": {
+        "min": [
+          -1,
+          -1,
+          -1
+        ],
+        "max": [
+          1,
+          1,
+          1
+        ]
+      },
+      "translation": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "type": "object",
+      "name": "wall11",
+      "mesh": 10,
+      "texture": 4,
+      "aabb": {
+        "min": [
+          -1,
+          -1,
+          -1
+        ],
+        "max": [
+          1,
+          1,
+          1
+        ]
+      },
+      "translation": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "type": "object",
+      "name": "wall12",
+      "mesh": 11,
+      "texture": 4,
+      "aabb": {
+        "min": [
+          -1,
+          -1,
+          -1
+        ],
+        "max": [
+          1,
+          1,
+          1
+        ]
+      },
+      "translation": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "type": "object",
+      "name": "wall13",
+      "mesh": 12,
+      "texture": 4,
+      "aabb": {
+        "min": [
+          -1,
+          -1,
+          -1
+        ],
+        "max": [
+          1,
+          1,
+          1
+        ]
+      },
+      "translation": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "type": "object",
+      "name": "wall14",
+      "mesh": 13,
+      "texture": 4,
+      "aabb": {
+        "min": [
+          -1,
+          -1,
+          -1
+        ],
+        "max": [
+          1,
+          1,
+          1
+        ]
+      },
+      "translation": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "type": "object",
+      "name": "wall15",
+      "mesh": 14,
+      "texture": 4,
+      "aabb": {
+        "min": [
+          -1,
+          -1,
+          -1
+        ],
+        "max": [
+          1,
+          1,
+          1
+        ]
+      },
+      "translation": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "type": "object",
+      "name": "wall16",
+      "mesh": 15,
+      "texture": 4,
+      "aabb": {
+        "min": [
+          -1,
+          -1,
+          -1
+        ],
+        "max": [
+          1,
+          1,
+          1
+        ]
+      },
+      "translation": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "type": "object",
+      "name": "wall17",
+      "mesh": 16,
+      "texture": 4,
+      "aabb": {
+        "min": [
+          -1,
+          -1,
+          -1
+        ],
+        "max": [
+          1,
+          1,
+          1
+        ]
+      },
+      "translation": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "type": "object",
+      "name": "wall18",
+      "mesh": 17,
+      "texture": 4,
+      "aabb": {
+        "min": [
+          -1,
+          -1,
+          -1
+        ],
+        "max": [
+          1,
+          1,
+          1
+        ]
+      },
+      "translation": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "type": "object",
+      "name": "wall19",
+      "mesh": 18,
+      "texture": 4,
+      "aabb": {
+        "min": [
+          -1,
+          -1,
+          -1
+        ],
+        "max": [
+          1,
+          1,
+          1
+        ]
+      },
+      "translation": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "type": "object",
+      "name": "wall20",
+      "mesh": 19,
+      "texture": 4,
+      "aabb": {
+        "min": [
+          -1,
+          -1,
+          -1
+        ],
+        "max": [
+          1,
+          1,
+          1
+        ]
+      },
+      "translation": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "type": "object",
+      "name": "wall21",
+      "mesh": 20,
+      "texture": 4,
+      "aabb": {
+        "min": [
+          -1,
+          -1,
+          -1
+        ],
+        "max": [
+          1,
+          1,
+          1
+        ]
+      },
+      "translation": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "type": "object",
+      "name": "wall22",
+      "mesh": 21,
+      "texture": 4,
+      "aabb": {
+        "min": [
+          -1,
+          -1,
+          -1
+        ],
+        "max": [
+          1,
+          1,
+          1
+        ]
+      },
+      "translation": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "type": "object",
+      "name": "wall23",
+      "mesh": 22,
+      "texture": 4,
+      "aabb": {
+        "min": [
+          -1,
+          -1,
+          -1
+        ],
+        "max": [
+          1,
+          1,
+          1
+        ]
+      },
+      "translation": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "type": "object",
+      "name": "wall24",
+      "mesh": 23,
+      "texture": 4,
+      "aabb": {
+        "min": [
+          -1,
+          -1,
+          -1
+        ],
+        "max": [
+          1,
+          1,
+          1
+        ]
+      },
+      "translation": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "type": "object",
+      "name": "wall25",
+      "mesh": 24,
+      "texture": 4,
+      "aabb": {
+        "min": [
+          -1,
+          -1,
+          -1
+        ],
+        "max": [
+          1,
+          1,
+          1
+        ]
+      },
+      "translation": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "type": "object",
+      "name": "exit",
+      "mesh": 25,
       "texture": 0,
       "aabb": {
         "min": [
@@ -125,9 +884,75 @@
     },
     {
       "type": "object",
-      "name": "object4",
-      "mesh": 3,
-      "texture": 1,
+      "name": "wall27",
+      "mesh": 26,
+      "texture": 4,
+      "aabb": {
+        "min": [
+          -1,
+          -1,
+          -1
+        ],
+        "max": [
+          1,
+          1,
+          1
+        ]
+      },
+      "translation": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "type": "object",
+      "name": "barrels",
+      "mesh": 27,
+      "texture": 2,
+      "aabb": {
+        "min": [
+          -1,
+          -1,
+          -1
+        ],
+        "max": [
+          1,
+          1,
+          1
+        ]
+      },
+      "translation": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "type": "object",
+      "name": "key",
+      "mesh": 28,
+      "texture": 5,
       "aabb": {
         "min": [
           -1,
@@ -158,13 +983,42 @@
     }
   ],
   "textures": [
-    "../../common/images/crate-diffuse.png",
-    "../../common/images/creepytiles.png"
+    "../../common/images/bush.jpeg",
+    "../../common/images/creepytiles.png",
+    "../../common/images/barrel.png",
+    "../../common/images/wall.png",
+    "../../common/images/stones.png",
+    "../../common/images/key.jpeg"
   ],
   "meshes": [
     "../../common/models/1.json",
     "../../common/models/2.json",
     "../../common/models/3.json",
-    "../../common/models/4.json"
+    "../../common/models/4.json",
+    "../../common/models/5.json",
+    "../../common/models/6.json",
+    "../../common/models/7.json",
+    "../../common/models/8.json",
+    "../../common/models/9.json",
+    "../../common/models/10.json",
+    "../../common/models/11.json",
+    "../../common/models/12.json",
+    "../../common/models/13.json",
+    "../../common/models/14.json",
+    "../../common/models/15.json",
+    "../../common/models/16.json",
+    "../../common/models/17.json",
+    "../../common/models/18.json",
+    "../../common/models/20.json",
+    "../../common/models/21.json",
+    "../../common/models/22.json",
+    "../../common/models/23.json",
+    "../../common/models/24.json",
+    "../../common/models/25.json",
+    "../../common/models/26.json",
+    "../../common/models/27.json",
+    "../../common/models/28.json",
+    "../../common/models/29.json",
+    "../../common/models/30.json"
   ]
 }
