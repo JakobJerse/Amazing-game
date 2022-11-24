@@ -52,6 +52,22 @@ export class Camera extends Node {
             c.maxSpeed = 3;
             c.fov = 1.5;
         }
+        if (this.keys['KeyK']) {
+            c.translation = [
+                9.5,
+                1,
+                20
+              ]
+        }
+        if (this.keys['KeyT']) {
+            c.translation = [
+                -3,
+                1,
+                -14
+              ]
+        }
+
+        console.log(c.translation)
 
         // 2: update velocity
         vec3.scaleAndAdd(c.velocity, c.velocity, acc, dt * c.acceleration);
