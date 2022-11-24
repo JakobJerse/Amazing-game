@@ -71,9 +71,9 @@ export class Camera extends Node {
         }
         if (this.keys['KeyC']) {
             c.translation = [
-                16.47,
+                -12.43,
                 1,
-                11.46
+                6.85
             ]
         }
 
