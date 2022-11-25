@@ -28,7 +28,7 @@
       "type": "object",
       "name": "floor",
       "mesh": 0,
-      "texture": 2,
+      "texture": 6,
       "aabb": {
         "min": [
           -1,
@@ -969,6 +969,72 @@
         0,
         0,
         0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "type": "ghost",
+      "name": "ghost",
+      "mesh": 29,
+      "texture": 7,
+      "aabb": {
+        "min": [
+          -1,
+          -1,
+          -1
+        ],
+        "max": [
+          1,
+          1,
+          1
+        ]
+      },
+      "translation": [
+        13.655,
+        1,
+        10
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "type": "ghost",
+      "name": "ghost",
+      "mesh": 29,
+      "texture": 7,
+      "aabb": {
+        "min": [
+          -0.1,
+          -1,
+          -1
+        ],
+        "max": [
+          0.1,
+          1,
+          1
+        ]
+      },
+      "translation": [
+        -19.60,
+        1,
+        -14.98
       ],
       "rotation": [
         0,
@@ -2445,11 +2511,13 @@
     "../../common/images/barrel.png",
     "../../common/images/wall.png",
     "../../common/images/stones.png",
-    "../../common/images/key.jpeg"
+    "../../common/images/key.jpeg",
+    "../../common/images/floor.jpeg",
+    "../../common/images/waz.jpeg"
   ],
   "meshes": [
     "../../common/models/1.json",
-    "../../common/models/2.json", 
+    "../../common/models/2.json",
     "../../common/models/3.json",
     "../../common/models/4.json",
     "../../common/models/5.json",

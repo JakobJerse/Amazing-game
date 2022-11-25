@@ -5,6 +5,7 @@ import { Physics } from './Physics.js';
 import { Camera } from './Camera.js';
 import { SceneLoader } from './SceneLoader.js';
 import { SceneBuilder } from './SceneBuilder.js';
+import { Ghost } from './Ghost.js';
 
 class App extends Application {
 
@@ -17,6 +18,8 @@ class App extends Application {
         this.aspect = 1;
 
         await this.load('scene.json');
+
+        console.log(this.scene)
 
         this.canvas.addEventListener('click', e => this.canvas.requestPointerLock());
         document.addEventListener('pointerlockchange', e => {
@@ -36,9 +39,13 @@ class App extends Application {
 
         // Find first camera.
         this.camera = null;
+        this.ghost = []
         this.scene.traverse(node => {
             if (node instanceof Camera) {
                 this.camera = node;
+            }
+            if (node instanceof Ghost) {
+                this.ghost.push(node)
             }
         });
 
@@ -52,8 +59,19 @@ class App extends Application {
         const dt = (this.time - this.startTime) * 0.001;
         this.startTime = this.time;
 
-        this.camera.update(dt);
-        this.physics.update(dt);
+        if (this.camera) {
+            this.camera.update(dt);
+        }
+        if (this.ghost) {
+            this.ghost.forEach(min => {
+                min.update(dt);
+            });
+        }
+
+        if (this.physics) {
+            this.physics.update(dt);
+        }
+
     }
 
     render() {

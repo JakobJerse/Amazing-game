@@ -10,10 +10,11 @@ export class Physics {
         this.scene.traverse(node => {
             // Move every node with defined velocity.
             if (node.velocity) {
+
                 vec3.scaleAndAdd(node.translation, node.translation, node.velocity, dt);
                 node.updateMatrix();
 
-                // After moving, check for collision with every other node.
+                // After moving, check for collision with every other node
                 this.scene.traverse(other => {
                     if (node !== other) {
                         this.resolveCollision(node, other);
