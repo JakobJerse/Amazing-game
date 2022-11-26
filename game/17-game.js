@@ -22,6 +22,9 @@ class App extends Application {
         this.zbrisiEnkrat = 0;
         this.exitJumpscareWithoutKey = 1;
 
+        // jers
+        this.collisionGhost = 0;
+
         await this.load('scene.json');
 
         this.canvas.addEventListener('click', e => this.canvas.requestPointerLock());
@@ -56,11 +59,11 @@ class App extends Application {
         this.camera.updateProjection();
         this.renderer.prepare(this.scene);
 
-        for(let index = 0; index < this.scene.nodes.length; ++index){
-            if(this.scene.nodes[index].name == "key"){
+        for (let index = 0; index < this.scene.nodes.length; ++index) {
+            if (this.scene.nodes[index].name == "key") {
                 this.zaZbrisat1 = index;
             }
-            if(this.scene.nodes[index].name == "collisonkluc"){
+            if (this.scene.nodes[index].name == "collisonkluc") {
                 this.zaZbrisat2 = index;
             }
         }
@@ -83,30 +86,36 @@ class App extends Application {
             this.physics.update(dt);
         }
 
-        if(this.zbrisiEnkrat == 0){
-            if(this.physics.checkKljuc(dt) == 1){
+        if (this.zbrisiEnkrat == 0) {
+            if (this.physics.checkKljuc(dt) == 1) {
                 this.kluc = 1;
             }
-            if(this.kluc == 1){
+            if (this.kluc == 1) {
                 this.scene.nodes.splice(this.zaZbrisat1, 1);
                 this.scene.nodes.splice(this.zaZbrisat2 - 1, 1);
                 this.zbrisiEnkrat = 1;
             }
         }
 
-        if(this.physics.checkExit(dt) == 1){
-            if(this.kluc == 1){
+        if (this.physics.checkExit(dt) == 1) {
+            if (this.kluc == 1) {
                 console.log("victory");
-            } else if(this.exitJumpscareWithoutKey == 1){
+            } else if (this.exitJumpscareWithoutKey == 1) {
                 document.getElementById("jumpscare1").style.display = "block";
                 document.getElementById("wazapzvok").play();
-                setTimeout(function(){
+                setTimeout(function () {
                     document.getElementById("jumpscare1").style.display = "none";
                 }, 2000)
                 console.log("JUMPSCARE");
                 this.exitJumpscareWithoutKey = 0;
             }
         }
+        if (this.physics.checkGhost(dt) == 1) {
+            if (this.kluc == 1) {
+                console.log("wazaaaap");
+            }
+        }
+
     }
 
     render() {
