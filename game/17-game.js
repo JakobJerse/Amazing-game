@@ -99,7 +99,7 @@ class App extends Application {
 
         if (this.physics.checkExit(dt) == 1) {
             if (this.kluc == 1) {
-                console.log("victory");
+                document.getElementById("victory").style.display = "block";
             } else if (this.exitJumpscareWithoutKey == 1) {
                 document.getElementById("jumpscare1").style.display = "block";
                 document.getElementById("wazapzvok").play();
@@ -111,7 +111,7 @@ class App extends Application {
             }
         }
         if (this.physics.checkGhost(dt) == 1) {
-            console.log("wazaaaap");
+            document.getElementById("death").style.display = "block";
         }
 
     }
