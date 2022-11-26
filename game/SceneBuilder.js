@@ -70,9 +70,9 @@ export class SceneBuilder {
                 //console.log(spec)
                 //console.log(this.spec.meshes[spec.mesh])
                 const texture = this.spec.textures[spec.texture];
-                return new Model(mesh1, texture, spec);
+                return new Model(mesh1, texture, spec, spec.name);
             }
-            default: return new Node(spec);
+            default: return new Node(spec, spec.name);
         }
     }
 
