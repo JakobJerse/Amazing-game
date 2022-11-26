@@ -23,7 +23,7 @@ class App extends Application {
         this.exitJumpscareWithoutKey = 1;
         this.deathSound = Math.floor(Math.random() * 6.99);
         this.death = 1;
-        this.backSound = Math.floor(Math.random() * 2.99);
+        this.backSound = Math.floor(Math.random() * 3.99);
         this.zeZaigral = 0;
 
         // jers
@@ -44,6 +44,10 @@ class App extends Application {
             } else if(this.backSound == 2 && this.zeZaigral == 0){
                 document.getElementById("back3").volume = 0.3;
                 document.getElementById("back3").play();
+                this.zeZaigral = 1;
+            } else if(this.backSound == 3 && this.zeZaigral == 0){
+                document.getElementById("back4").volume = 0.3;
+                document.getElementById("back4").play();
                 this.zeZaigral = 1;
             }
             if (document.pointerLockElement === this.canvas) {
@@ -139,6 +143,8 @@ class App extends Application {
                 document.getElementById("back2").pause();
             } else if(this.backSound == 2){
                 document.getElementById("back3").pause();
+            } else if(this.backSound == 3){
+                document.getElementById("back4").pause();
             }
 
             if(this.deathSound == 0 && this.death == 1){
