@@ -111,9 +111,7 @@ class App extends Application {
             }
         }
         if (this.physics.checkGhost(dt) == 1) {
-            if (this.kluc == 1) {
-                console.log("wazaaaap");
-            }
+            console.log("wazaaaap");
         }
 
     }

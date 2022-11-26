@@ -108,7 +108,7 @@ export class Physics {
         // Check if there is collision.
         const isColliding = this.aabbIntersection(aBox, bBox);
 
-        if (isColliding && (b.name == "ghost1" || b.name == "ghost2")) {
+        if (isColliding && (b.name == "ghost1" || b.name == "ghost2") && (a.name != "ghost1") && (a.name != "ghost2")) {
             return true;
         } else {
             return false;
