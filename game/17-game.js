@@ -96,9 +96,14 @@ class App extends Application {
 
         if(this.physics.checkExit(dt) == 1){
             if(this.kluc == 1){
-                console.log("lahko gres ven");
+                console.log("victory");
             } else if(this.exitJumpscareWithoutKey == 1){
-                console.log("jumpscare");
+                document.getElementById("jumpscare1").style.display = "block";
+                document.getElementById("wazapzvok").play();
+                setTimeout(function(){
+                    document.getElementById("jumpscare1").style.display = "none";
+                }, 2000)
+                console.log("JUMPSCARE");
                 this.exitJumpscareWithoutKey = 0;
             }
         }

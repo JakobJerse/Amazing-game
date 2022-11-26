@@ -62,7 +62,7 @@
       "type": "ghost",
       "name": "ghost",
       "mesh": 29,
-      "texture": 7,
+      "texture": 6,
       "aabb": {
         "min": [
           -1,
@@ -95,15 +95,15 @@
       "type": "ghost",
       "name": "ghost",
       "mesh": 29,
-      "texture": 7,
+      "texture": 6,
       "aabb": {
         "min": [
-          -0.1,
+          -1,
           -1,
           -1
         ],
         "max": [
-          0.1,
+          1,
           1,
           1
         ]
