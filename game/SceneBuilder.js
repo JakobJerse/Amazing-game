@@ -3,9 +3,9 @@ import { Mesh } from './Mesh.js';
 import { Node } from './Node.js';
 import { Model } from './Model.js';
 import { Camera } from './Camera.js';
-import { Ghost } from './Ghost.js';
 
 import { Scene } from './Scene.js';
+import { Ghost } from './Ghost.js';
 
 export class SceneBuilder {
 
@@ -18,7 +18,6 @@ export class SceneBuilder {
             case 'camera': return new Camera(spec);
 
             case 'object': {
-                // console.log(spec)
                 const vertices1D = []
                 const normals1D = []
                 const texels1D = []
@@ -41,7 +40,7 @@ export class SceneBuilder {
                         counter++
                     }
                 }
-                //console.log(indices1D)
+                console.log(indices1D)
                 // handle normals
                 for (let index = 0; index < mesh.objects[0].length; index++) {
                     const triangle = mesh.objects[0][index]
@@ -68,13 +67,12 @@ export class SceneBuilder {
 
 
                 const mesh1 = new Mesh({ vertices: vertices1D, texcoords: texels1D, normals: normals1D, indices: indices1D });
-                //console.log(mesh1)
+                console.log(mesh1)
                 //console.log(spec)
                 //console.log(this.spec.meshes[spec.mesh])
                 const texture = this.spec.textures[spec.texture];
-                return new Model(mesh1, texture, spec);
+                return new Model(mesh1, texture, spec, spec.name);
             }
-
             case 'ghost': {
                 // console.log(spec)
                 const vertices1D = []
@@ -133,15 +131,13 @@ export class SceneBuilder {
                 console.log("Ghost created");
                 return new Ghost(mesh1, texture, name, distance, 1, spec);
             }
-            default: return new Node(spec);
+            default: return new Node(spec, spec.name);
         }
     }
 
     build() {
         let scene = new Scene();
-        console.log("node added")
         this.spec.nodes.forEach(spec => scene.addNode(this.createNode(spec)));
-        console.log("scene returned")
         return scene;
     }
 

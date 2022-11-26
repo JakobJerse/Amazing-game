@@ -6,15 +6,86 @@ export class Physics {
         this.scene = scene;
     }
 
+    checkKljuc(dt) {
+        let colliding = 0;
+        this.scene.traverse(node => {
+            // Move every node with defined velocity.
+            if (node.velocity) {
+                vec3.scaleAndAdd(node.translation, node.translation, node.velocity, dt);
+                node.updateMatrix();
+
+                // After moving, check for collision with every other node.
+                this.scene.traverse(other => {
+                    if (node !== other) {
+                        if(this.collisionKljuc(node, other) == true){
+                            colliding = 1
+                        }
+                    }
+                });
+            }
+        });
+        return colliding;
+    }
+
+    collisionKljuc(a, b) {
+        // Get global space AABBs.
+        const aBox = this.getTransformedAABB(a);
+        const bBox = this.getTransformedAABB(b);
+
+        // Check if there is collision.
+        const isColliding = this.aabbIntersection(aBox, bBox);
+        
+        if(isColliding && b.name == "collisonkluc"){
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    checkExit(dt) {
+        let colliding = 0;
+        this.scene.traverse(node => {
+            // Move every node with defined velocity.
+            if (node.velocity) {
+                vec3.scaleAndAdd(node.translation, node.translation, node.velocity, dt);
+                node.updateMatrix();
+
+                // After moving, check for collision with every other node.
+                this.scene.traverse(other => {
+                    if (node !== other) {
+                        if(this.collisionExit(node, other) == true){
+                            colliding = 1
+                        }
+                    }
+                });
+            }
+        });
+        return colliding;
+    }
+
+    collisionExit(a, b) {
+        // Get global space AABBs.
+        const aBox = this.getTransformedAABB(a);
+        const bBox = this.getTransformedAABB(b);
+
+        // Check if there is collision.
+        const isColliding = this.aabbIntersection(aBox, bBox);
+        
+        if(isColliding && b.name == "exitcube"){
+            return true;
+        } else {
+            return false;
+        }
+    }
+
     update(dt) {
         this.scene.traverse(node => {
             // Move every node with defined velocity.
             if (node.velocity) {
-
                 vec3.scaleAndAdd(node.translation, node.translation, node.velocity, dt);
                 node.updateMatrix();
 
-                // After moving, check for collision with every other node
+                // After moving, check for collision with every other node.
                 this.scene.traverse(other => {
                     if (node !== other) {
                         this.resolveCollision(node, other);
@@ -105,3 +176,4 @@ export class Physics {
     }
 
 }
+
