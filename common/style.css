@@ -73,3 +73,21 @@ a.back:hover {
     display: none;
 }
 
+#victory {
+    position: absolute;
+    display: none;
+    text-align: center;
+    width: 100%;
+	height: 100%; 
+    background-color: grey;
+}
+
+#death {
+    position: absolute;
+    display: none;
+    text-align: center;
+    width: 100%;
+	height: 100%; 
+    background-color: grey;
+}
+
