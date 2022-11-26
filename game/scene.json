@@ -82,7 +82,7 @@
       ],
       "rotation": [
         0,
-        0,
+        6.28,
         0
       ],
       "scale": [
@@ -115,7 +115,7 @@
       ],
       "rotation": [
         0,
-        0,
+        6.28,
         0
       ],
       "scale": [
@@ -2580,7 +2580,7 @@
     "../../common/images/stones.png",
     "../../common/images/key.jpeg",
     "../../common/images/waz.jpeg",
-    "../../common/images/floor.jpeg",
+    "../../common/images/ghost2.jpeg",
     "../../common/images/ghost.jpeg"
   ],
   "meshes": [
