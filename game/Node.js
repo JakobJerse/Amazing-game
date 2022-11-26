@@ -10,6 +10,15 @@ export class Node {
         this.matrix = mat4.create();
         this.updateMatrix();
 
+        // check for name and velocity
+        if (options.velocity) {
+            this.velocity = options.velocity;
+        }
+
+        if (options.name) {
+            this.name = options.name;
+        }
+
         this.children = [];
         this.parent = null;
         this.name = name;
