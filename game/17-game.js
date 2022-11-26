@@ -16,6 +16,11 @@ class App extends Application {
         this.time = performance.now();
         this.startTime = this.time;
         this.aspect = 1;
+        this.kluc = 0;
+        this.zaZbrisat1 = 0;
+        this.zaZbrisat2 = 0;
+        this.zbrisiEnkrat = 0;
+        this.exitJumpscareWithoutKey = 1;
 
         await this.load('scene.json');
 
@@ -29,6 +34,8 @@ class App extends Application {
                 this.camera.disable();
             }
         });
+
+        
     }
 
     async load(uri) {
@@ -52,6 +59,15 @@ class App extends Application {
         this.camera.aspect = this.aspect;
         this.camera.updateProjection();
         this.renderer.prepare(this.scene);
+
+        for(let index = 0; index < this.scene.nodes.length; ++index){
+            if(this.scene.nodes[index].name == "key"){
+                this.zaZbrisat1 = index;
+            }
+            if(this.scene.nodes[index].name == "collisonkluc"){
+                this.zaZbrisat2 = index;
+            }
+        }
     }
 
     update() {
@@ -59,19 +75,28 @@ class App extends Application {
         const dt = (this.time - this.startTime) * 0.001;
         this.startTime = this.time;
 
-        if (this.camera) {
-            this.camera.update(dt);
-        }
-        if (this.ghost) {
-            this.ghost.forEach(min => {
-                min.update(dt);
-            });
+        this.camera.update(dt);
+        this.physics.update(dt);
+
+        if(this.zbrisiEnkrat == 0){
+            if(this.physics.checkKljuc(dt) == 1){
+                this.kluc = 1;
+            }
+            if(this.kluc == 1){
+                this.scene.nodes.splice(this.zaZbrisat1, 1);
+                this.scene.nodes.splice(this.zaZbrisat2 - 1, 1);
+                this.zbrisiEnkrat = 1;
+            }
         }
 
-        if (this.physics) {
-            this.physics.update(dt);
+        if(this.physics.checkExit(dt) == 1){
+            if(this.kluc == 1){
+                console.log("lahko gres ven");
+            } else if(this.exitJumpscareWithoutKey == 1){
+                console.log("jumpscare");
+                this.exitJumpscareWithoutKey = 0;
+            }
         }
-
     }
 
     render() {

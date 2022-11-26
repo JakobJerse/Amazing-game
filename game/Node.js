@@ -4,7 +4,7 @@ import { Utils } from './Utils.js';
 
 export class Node {
 
-    constructor(options) {
+    constructor(options, name) {
         Utils.init(this, Node.defaults, options);
 
         this.matrix = mat4.create();
@@ -21,6 +21,7 @@ export class Node {
 
         this.children = [];
         this.parent = null;
+        this.name = name;
     }
 
     updateMatrix() {
