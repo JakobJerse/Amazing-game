@@ -984,8 +984,8 @@
     {
       "type": "ghost",
       "name": "ghost",
-      "mesh": 29,
-      "texture": 7,
+      "mesh": 30,
+      "texture": 8,
       "aabb": {
         "min": [
           -1,
@@ -1000,7 +1000,7 @@
       },
       "translation": [
         13.655,
-        1,
+        0,
         10
       ],
       "rotation": [
@@ -2513,7 +2513,8 @@
     "../../common/images/stones.png",
     "../../common/images/key.jpeg",
     "../../common/images/floor.jpeg",
-    "../../common/images/waz.jpeg"
+    "../../common/images/waz.jpeg",
+    "../../common/images/ghost.jpeg"
   ],
   "meshes": [
     "../../common/models/1.json",
@@ -2545,6 +2546,7 @@
     "../../common/models/28.json",
     "../../common/models/29.json",
     "../../common/models/30.json",
-    "../../common/models/cube3.json"
+    "../../common/models/cube3.json",
+    "../../common/models/ghost.json"
   ]
 }
