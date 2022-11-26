@@ -1,4 +1,6 @@
 import { vec3, mat4 } from '../../lib/gl-matrix-module.js';
+import { Camera } from './Camera.js';
+import { Model } from './Model.js';
 
 export class Physics {
 
@@ -17,7 +19,7 @@ export class Physics {
                 // After moving, check for collision with every other node.
                 this.scene.traverse(other => {
                     if (node !== other) {
-                        if(this.collisionKljuc(node, other) == true){
+                        if (this.collisionKljuc(node, other) == true) {
                             colliding = 1
                         }
                     }
@@ -34,8 +36,8 @@ export class Physics {
 
         // Check if there is collision.
         const isColliding = this.aabbIntersection(aBox, bBox);
-        
-        if(isColliding && b.name == "collisonkluc"){
+
+        if (isColliding && b.name == "collisonkluc") {
             return true;
         } else {
             return false;
@@ -53,7 +55,7 @@ export class Physics {
                 // After moving, check for collision with every other node.
                 this.scene.traverse(other => {
                     if (node !== other) {
-                        if(this.collisionExit(node, other) == true){
+                        if (this.collisionExit(node, other) == true) {
                             colliding = 1
                         }
                     }
@@ -70,8 +72,43 @@ export class Physics {
 
         // Check if there is collision.
         const isColliding = this.aabbIntersection(aBox, bBox);
-        
-        if(isColliding && b.name == "exitcube"){
+
+        if (isColliding && b.name == "exitcube") {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    checkGhost(dt) {
+        let colliding = 0;
+        this.scene.traverse(node => {
+            // Move every node with defined velocity.
+            if (node.velocity) {
+                vec3.scaleAndAdd(node.translation, node.translation, node.velocity, dt);
+                node.updateMatrix();
+
+                // After moving, check for collision with every other node.
+                this.scene.traverse(other => {
+                    if (node !== other) {
+                        if (this.collisionGhost(node, other) == true) {
+                            colliding = 1
+                        }
+                    }
+                });
+            }
+        });
+        return colliding;
+    }
+
+    collisionGhost(a, b) {
+        // Get global space AABBs.
+        const aBox = this.getTransformedAABB(a);
+        const bBox = this.getTransformedAABB(b);
+
+        // Check if there is collision.
+        const isColliding = this.aabbIntersection(aBox, bBox);
+
+        if (isColliding && (b.name == "ghost1" || b.name == "ghost2")) {
             return true;
         } else {
             return false;
@@ -87,7 +124,7 @@ export class Physics {
 
                 // After moving, check for collision with every other node.
                 this.scene.traverse(other => {
-                    if (node !== other) {
+                    if (node !== other && !(other instanceof Model) && node instanceof Camera) {
                         this.resolveCollision(node, other);
                     }
                 });

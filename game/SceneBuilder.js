@@ -126,10 +126,68 @@ export class SceneBuilder {
                 const mesh1 = new Mesh({ vertices: vertices1D, texcoords: texels1D, normals: normals1D, indices: indices1D });
                 const texture = this.spec.textures[spec.texture];
                 const name = spec.name;
-                const distance = 10;
+                const distance = 45;
                 console.log(distance)
                 console.log("Ghost created");
                 return new Ghost(mesh1, texture, name, distance, 1, spec);
+            }
+            case 'ghost2': {
+                // console.log(spec)
+                const vertices1D = []
+                const normals1D = []
+                const texels1D = []
+                const indices1D = []
+                const mesh = this.spec.meshes[spec.mesh]
+                //console.log(mesh)
+                //console.log(mesh.objects[0].length)
+                let counter = 0
+                // handle vertices
+                for (let index = 0; index < mesh.objects[0].length; index++) {
+                    const triangle = mesh.objects[0][index]
+                    const triangle_indeces_array = triangle.vertexIndices
+                    for (let i = 0; i < 3; i++) {
+                        const vertex_vector = mesh.vertices[triangle_indeces_array[i] - 1]
+                        for (let j = 0; j < 3; j++) {
+                            vertices1D.push(vertex_vector[j])
+
+                        }
+                        indices1D.push(counter)
+                        counter++
+                    }
+                }
+                //console.log(indices1D)
+                // handle normals
+                for (let index = 0; index < mesh.objects[0].length; index++) {
+                    const triangle = mesh.objects[0][index]
+                    const triangle_indeces_array = triangle.normalIndices
+                    for (let i = 0; i < 3; i++) {
+                        const normal_vector = mesh.normals[triangle_indeces_array[i] - 1]
+                        for (let j = 0; j < 3; j++) {
+                            normals1D.push(normal_vector[j])
+                        }
+                    }
+                }
+
+                // handle texels
+                for (let index = 0; index < mesh.objects[0].length; index++) {
+                    const triangle = mesh.objects[0][index]
+                    const triangle_indeces_array = triangle.texselIndices
+                    for (let i = 0; i < 3; i++) {
+                        const texel_vector = mesh.texsels[triangle_indeces_array[i] - 1]
+                        for (let j = 0; j < 2; j++) {
+                            texels1D.push(texel_vector[j])
+                        }
+                    }
+                }
+
+
+                const mesh1 = new Mesh({ vertices: vertices1D, texcoords: texels1D, normals: normals1D, indices: indices1D });
+                const texture = this.spec.textures[spec.texture];
+                const name = spec.name;
+                const distance = 45;
+                console.log(distance)
+                console.log("Ghost2 created");
+                return new Ghost(mesh1, texture, name, distance, 0, spec);
             }
             default: return new Node(spec, spec.name);
         }

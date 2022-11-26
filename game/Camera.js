@@ -45,7 +45,7 @@ export class Camera extends Node {
             vec3.sub(acc, acc, right);
         }
         if (this.keys['KeyE']) {
-            c.maxSpeed = 10;
+            c.maxSpeed = 5;
             c.fov = 1.55;
         }
         if (!this.keys['KeyE']) {
@@ -152,5 +152,5 @@ Camera.defaults = {
     pointerSensitivity: 0.002,
     maxSpeed: 3,
     friction: 0.2,
-    acceleration: 20
+    acceleration: 7
 };

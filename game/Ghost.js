@@ -16,14 +16,18 @@ export class Ghost extends Node {
         this.z = options.translation[2];
         this.distance = distance
         this.axis = axis; // 0 = x, 1 = z
-        this.velocity = [0, 0, 2];
+        if (this.axis) {
+            this.velocity = [0, 0, 1];
+        }
+        else {
+            this.velocity = [1.5, 0, 0];
+        }
     }
 
     update(dt) {
         //console.log("ghost update called");
         const g = this;
-        //console.log(g.z);
-
+        //console.log(g.roation);
         // z axis
         if (g.axis) {
             if (g.translation[2] >= g.z + g.distance) {
@@ -36,10 +40,10 @@ export class Ghost extends Node {
         // x axis
         else {
             if (g.translation[0] > g.x + g.distance) {
-                g.velocity = -g.velocity;
+                g.velocity = vec3.scale(g.velocity, g.velocity, -1);
             }
             if (g.translation[0] < g.x) {
-                g.velocity = -g.velocity;
+                g.velocity = vec3.scale(g.velocity, g.velocity, -1);
             }
         }
     }
@@ -49,5 +53,5 @@ export class Ghost extends Node {
 Ghost.defaults = {
     velocity: [0, 0, 0],
     scale: [0.5, 0.5, 0.5],
-    acceleration: 15
+    acceleration: 5
 };

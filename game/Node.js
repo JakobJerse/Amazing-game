@@ -14,10 +14,6 @@ export class Node {
             this.velocity = options.velocity;
         }
 
-        if (options.name) {
-            this.name = options.name;
-        }
-
         this.children = [];
         this.parent = null;
         this.name = name;
