@@ -16,7 +16,6 @@ export class Camera extends Node {
         this.keydownHandler = this.keydownHandler.bind(this);
         this.keyupHandler = this.keyupHandler.bind(this);
         this.keys = {};
-        this.name = "camera";
     }
 
     updateProjection() {
@@ -70,6 +69,14 @@ export class Camera extends Node {
         if (this.keys['KeyP']) {
             console.log(c.translation)
         }
+        if (this.keys['KeyC']) {
+            c.translation = [
+                -12.43,
+                1,
+                6.85
+            ]
+        }
+
         // 2: update velocity
         vec3.scaleAndAdd(c.velocity, c.velocity, acc, dt * c.acceleration);
 

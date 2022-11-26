@@ -2,7 +2,6 @@
   "nodes": [
     {
       "type": "camera",
-      "name": "camera",
       "translation": [
         1.5,
         1,

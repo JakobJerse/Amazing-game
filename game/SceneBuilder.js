@@ -72,7 +72,7 @@ export class SceneBuilder {
                 //console.log(spec)
                 //console.log(this.spec.meshes[spec.mesh])
                 const texture = this.spec.textures[spec.texture];
-                return new Model(mesh1, texture, spec, spec.name);
+                return new Model(mesh1, texture, spec);
             }
 
             case 'ghost': {
