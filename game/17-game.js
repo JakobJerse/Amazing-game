@@ -184,7 +184,7 @@ class App extends Application {
             document.getElementById("death").style.display = "block";
         }
 
-        if(this.dvignjenTelefon == 0){
+        if(this.dvignjenTelefon == 0 && this.death == 1){
             let novDatum = new Date();
             let noveSekunde = novDatum.getSeconds();
             let cameraX = this.camera.translation[0];
