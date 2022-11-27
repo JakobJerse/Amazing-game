@@ -130,11 +130,11 @@ class App extends Application {
                 document.getElementById("odpri").play();
                 document.getElementById("victory").style.display = "block";
             } else if (this.exitJumpscareWithoutKey == 1) {
-                document.getElementById("jumpscare1").style.display = "block";
-                document.getElementById("wazapzvok").volume = 1;
-                document.getElementById("wazapzvok").play();
+                document.getElementById("jumpscare2").style.display = "block";
+                document.getElementById("amogussound").volume = 1;
+                document.getElementById("amogussound").play();
                 setTimeout(function () {
-                    document.getElementById("jumpscare1").style.display = "none";
+                    document.getElementById("jumpscare2").style.display = "none";
                 }, 2000)
                 console.log("JUMPSCARE");
                 this.exitJumpscareWithoutKey = 0;
@@ -199,7 +199,7 @@ class App extends Application {
         if(this.dvignjenTelefon == 0){
             let novDatum = new Date();
             let noveSekunde = novDatum.getSeconds();
-            if(Math.abs(this.sekunde - noveSekunde) == 5){
+            if(Math.abs(this.sekunde - noveSekunde) >= 5){
                 let cameraX = this.camera.translation[0];
                 let cameraY = this.camera.translation[2];
                 let telefonX = -2.6;
