@@ -36,19 +36,19 @@ class App extends Application {
 
         this.canvas.addEventListener('click', e => this.canvas.requestPointerLock());
         document.addEventListener('pointerlockchange', e => {
-            if(this.backSound == 0 && this.zeZaigral == 0){
+            if (this.backSound == 0 && this.zeZaigral == 0) {
                 document.getElementById("back1").volume = 0.15;
                 document.getElementById("back1").play();
                 this.zeZaigral = 1;
-            } else if(this.backSound == 1 && this.zeZaigral == 0){
+            } else if (this.backSound == 1 && this.zeZaigral == 0) {
                 document.getElementById("back2").volume = 0.15;
                 document.getElementById("back2").play();
                 this.zeZaigral = 1;
-            } else if(this.backSound == 2 && this.zeZaigral == 0){
+            } else if (this.backSound == 2 && this.zeZaigral == 0) {
                 document.getElementById("back3").volume = 0.15;
                 document.getElementById("back3").play();
                 this.zeZaigral = 1;
-            } else if(this.backSound == 3 && this.zeZaigral == 0){
+            } else if (this.backSound == 3 && this.zeZaigral == 0) {
                 document.getElementById("back4").volume = 0.15;
                 document.getElementById("back4").play();
                 this.zeZaigral = 1;
@@ -128,7 +128,7 @@ class App extends Application {
             if (this.kluc == 1) {
                 document.getElementById("odpri").volume = 0.7;
                 document.getElementById("odpri").play();
-                document.getElementById("victory").style.display = "block";
+                document.getElementById("victory").style.display = "flex";
             } else if (this.exitJumpscareWithoutKey == 1) {
                 document.getElementById("jumpscare2").style.display = "block";
                 document.getElementById("amogussound").volume = 1;
@@ -141,47 +141,47 @@ class App extends Application {
             }
         }
         if (this.physics.checkGhost(dt) == 1) {
-            if(this.backSound == 0){
+            if (this.backSound == 0) {
                 document.getElementById("back1").pause();
-            } else if(this.backSound == 1){
+            } else if (this.backSound == 1) {
                 document.getElementById("back2").pause();
-            } else if(this.backSound == 2){
+            } else if (this.backSound == 2) {
                 document.getElementById("back3").pause();
-            } else if(this.backSound == 3){
+            } else if (this.backSound == 3) {
                 document.getElementById("back4").pause();
             }
 
-            if(this.deathSound == 0 && this.death == 1){
+            if (this.deathSound == 0 && this.death == 1) {
                 document.getElementById("death1").volume = 1;
                 document.getElementById("death1").play();
                 this.death = 0;
-            } else if(this.deathSound == 1 && this.death == 1){
+            } else if (this.deathSound == 1 && this.death == 1) {
                 document.getElementById("death2").volume = 1;
                 document.getElementById("death2").play();
                 this.death = 0;
-            } else if(this.deathSound == 2 && this.death == 1){
+            } else if (this.deathSound == 2 && this.death == 1) {
                 document.getElementById("death3").volume = 1;
                 document.getElementById("death3").play();
                 this.death = 0;
-            } else if(this.deathSound == 3 && this.death == 1){
+            } else if (this.deathSound == 3 && this.death == 1) {
                 document.getElementById("death4").volume = 1;
                 document.getElementById("death4").play();
                 this.death = 0;
-            } else if(this.deathSound == 4 && this.death == 1){
+            } else if (this.deathSound == 4 && this.death == 1) {
                 document.getElementById("death5").volume = 1;
                 document.getElementById("death5").play();
                 this.death = 0;
-            } else if(this.deathSound == 5 && this.death == 1){
+            } else if (this.deathSound == 5 && this.death == 1) {
                 document.getElementById("death6").volume = 1;
                 document.getElementById("death6").play();
                 this.death = 0;
             }
-            else if(this.deathSound == 6 && this.death == 1){
+            else if (this.deathSound == 6 && this.death == 1) {
                 document.getElementById("death7").volume = 1;
                 document.getElementById("death7").play();
                 this.death = 0;
             }
-            document.getElementById("death").style.display = "block";
+            document.getElementById("death").style.display = "flex";
         }
 
         if (this.physics.checkTelefon(dt) == 1) {
@@ -196,10 +196,10 @@ class App extends Application {
             }
         }
 
-        if(this.dvignjenTelefon == 0){
+        if (this.dvignjenTelefon == 0) {
             let novDatum = new Date();
             let noveSekunde = novDatum.getSeconds();
-            if(Math.abs(this.sekunde - noveSekunde) >= 5){
+            if (Math.abs(this.sekunde - noveSekunde) >= 5) {
                 let cameraX = this.camera.translation[0];
                 let cameraY = this.camera.translation[2];
                 let telefonX = -2.6;

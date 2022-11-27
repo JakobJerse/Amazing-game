@@ -29,7 +29,7 @@
       "type": "object",
       "name": "floor",
       "mesh": 0,
-      "texture": 7,
+      "texture": 1,
       "aabb": {
         "min": [
           -1,
@@ -62,7 +62,7 @@
       "type": "ghost",
       "name": "ghost1",
       "mesh": 30,
-      "texture": 8,
+      "texture": 2,
       "aabb": {
         "min": [
           -0.1,
@@ -95,7 +95,7 @@
       "type": "ghost",
       "name": "ghost1",
       "mesh": 30,
-      "texture": 8,
+      "texture": 2,
       "aabb": {
         "min": [
           -0.1,
@@ -128,7 +128,7 @@
       "type": "ghost2",
       "name": "ghost2",
       "mesh": 30,
-      "texture": 8,
+      "texture": 2,
       "aabb": {
         "min": [
           -0.1,
@@ -161,7 +161,7 @@
       "type": "ghost2",
       "name": "ghost2",
       "mesh": 30,
-      "texture": 8,
+      "texture": 2,
       "aabb": {
         "min": [
           -0.1,
@@ -985,8 +985,8 @@
     {
       "type": "object",
       "name": "exit",
-      "mesh": 25,
-      "texture": 0,
+      "mesh": 35,
+      "texture": 1,
       "aabb": {
         "min": [
           0,
@@ -1052,7 +1052,7 @@
       "type": "object",
       "name": "key",
       "mesh": 28,
-      "texture": 5,
+      "texture": 0,
       "aabb": {
         "min": [
           -1,
@@ -1085,7 +1085,7 @@
       "type": "object",
       "name": "phone",
       "mesh": 31,
-      "texture": 9,
+      "texture": 3,
       "aabb": {
         "min": [
           -1,
@@ -1118,7 +1118,7 @@
       "type": "object",
       "name": "table",
       "mesh": 32,
-      "texture": 10,
+      "texture": 5,
       "aabb": {
         "min": [
           -1,
@@ -1135,6 +1135,39 @@
         0,
         0,
         0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "type": "object",
+      "name": "tree",
+      "mesh": 33,
+      "texture": 5,
+      "aabb": {
+        "min": [
+          -1,
+          -1,
+          -1
+        ],
+        "max": [
+          1,
+          1,
+          1
+        ]
+      },
+      "translation": [
+        1.8,
+        0,
+        -19.5
       ],
       "rotation": [
         0,
@@ -2637,16 +2670,11 @@
     }
   ],
   "textures": [
-    "../../common/images/bush.jpeg",
-    "../../common/images/creepytiles.png",
-    "../../common/images/barrel.png",
-    "../../common/images/wall.png",
-    "../../common/images/stones.png",
     "../../common/images/key.jpeg",
-    "../../common/images/waz.jpeg",
     "../../common/images/ghost2.jpeg",
     "../../common/images/ghost.jpeg",
     "../../common/images/phone.jpeg",
+    "../../common/images/stones.png",
     "../../common/images/brown.jpeg"
   ],
   "meshes": [
@@ -2682,6 +2710,9 @@
     "../../common/models/cube3.json",
     "../../common/models/ghost.json",
     "../../common/models/phone.json",
-    "../../common/models/table.json"
+    "../../common/models/table.json",
+    "../../common/models/tree.json",
+    "../../common/models/grave.json",
+    "../../common/models/door.json"
   ]
 }
