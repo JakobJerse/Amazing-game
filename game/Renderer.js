@@ -6,6 +6,7 @@ import { shaders } from './shaders.js';
 
 export class Renderer {
 
+
     constructor(gl) {
         this.gl = gl;
 
@@ -14,6 +15,7 @@ export class Renderer {
         gl.enable(gl.CULL_FACE);
 
         this.programs = WebGL.buildPrograms(gl, shaders);
+
     }
 
     prepare(scene) {
@@ -29,16 +31,19 @@ export class Renderer {
     }
 
     render(scene, camera) {
+        const fogColor = [0.7, 0.7, 0.7, 1];
+        const fogDensity = 0.33
         const gl = this.gl;
 
+        gl.clearColor(...fogColor);
         gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
 
         const { program, uniforms } = this.programs.simple;
         gl.useProgram(program);
 
+
         const matrix = mat4.create();
         const matrixStack = [];
-
         const viewMatrix = camera.getGlobalTransform();
         mat4.invert(viewMatrix, viewMatrix);
         mat4.copy(matrix, viewMatrix);
@@ -54,6 +59,8 @@ export class Renderer {
                     gl.activeTexture(gl.TEXTURE0);
                     gl.bindTexture(gl.TEXTURE_2D, node.gl.texture);
                     gl.uniform1i(uniforms.uTexture, 0);
+                    gl.uniform4fv(uniforms.uFogColor, fogColor);
+                    gl.uniform1f(uniforms.uFogDensity, fogDensity);
                     gl.drawElements(gl.TRIANGLES, node.gl.indices, gl.UNSIGNED_INT, 0);
                 }
             },
@@ -87,6 +94,7 @@ export class Renderer {
         const indices = model.indices.length;
         gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, gl.createBuffer());
         gl.bufferData(gl.ELEMENT_ARRAY_BUFFER, new Uint32Array(model.indices), gl.STATIC_DRAW);
+
         // uint16 array
         return { vao, indices };
     }
