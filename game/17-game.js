@@ -201,17 +201,7 @@ class App extends Application {
                 }, 2000)
                 this.dvignjenTelefon = 1;
             }
-        }
-
-        if (this.dvignjenTelefon == 0) {
-            let novDatum = new Date();
-            let noveSekunde = novDatum.getSeconds();
             if (Math.abs(this.sekunde - noveSekunde) >= 5) {
-                let cameraX = this.camera.translation[0];
-                let cameraY = this.camera.translation[2];
-                let telefonX = -2.6;
-                let telefonY = -5.75;
-                let euclid = Math.sqrt(Math.pow(cameraX - telefonX, 2) + Math.pow(cameraY - telefonY, 2));
                 let normaliziran = Math.abs(euclid / 34 - 1);
                 document.getElementById("telefon").volume = normaliziran;
                 document.getElementById("telefon").play();
