@@ -28,6 +28,7 @@ class App extends Application {
         this.dvignjenTelefon = 0;
         this.datum = new Date();
         this.sekunde = this.datum.getSeconds();
+        this.zmaga = 0;
 
         // jers
         this.collisionGhost = 0;
@@ -129,6 +130,7 @@ class App extends Application {
                 document.getElementById("odpri").volume = 0.7;
                 document.getElementById("odpri").play();
                 document.getElementById("victory").style.display = "flex";
+                this.zmaga = 1;
             } else if (this.exitJumpscareWithoutKey == 1) {
                 document.getElementById("jumpscare2").style.display = "block";
                 document.getElementById("amogussound").volume = 1;
@@ -184,7 +186,7 @@ class App extends Application {
             document.getElementById("death").style.display = "flex";
         }
 
-        if (this.dvignjenTelefon == 0 && this.death == 1) {
+        if (this.dvignjenTelefon == 0 && this.death == 1 && this.zmaga == 0) {
             let novDatum = new Date();
             let noveSekunde = novDatum.getSeconds();
             let cameraX = this.camera.translation[0];
