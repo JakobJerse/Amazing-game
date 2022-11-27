@@ -986,7 +986,7 @@
       "type": "object",
       "name": "exit",
       "mesh": 35,
-      "texture": 1,
+      "texture": 6,
       "aabb": {
         "min": [
           0,
@@ -1181,6 +1181,105 @@
       ]
     },
     {
+      "type": "object",
+      "name": "tree",
+      "mesh": 33,
+      "texture": 5,
+      "aabb": {
+        "min": [
+          -1,
+          -1,
+          -1
+        ],
+        "max": [
+          1,
+          1,
+          1
+        ]
+      },
+      "translation": [
+        -7.29,
+        0,
+        -19.5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "type": "object",
+      "name": "tree",
+      "mesh": 33,
+      "texture": 5,
+      "aabb": {
+        "min": [
+          -1,
+          -1,
+          -1
+        ],
+        "max": [
+          1,
+          1,
+          1
+        ]
+      },
+      "translation": [
+        10,
+        0,
+        -19.5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "type": "object",
+      "name": "tree",
+      "mesh": 33,
+      "texture": 5,
+      "aabb": {
+        "min": [
+          -1,
+          -1,
+          -1
+        ],
+        "max": [
+          1,
+          1,
+          1
+        ]
+      },
+      "translation": [
+        17,
+        0,
+        -19.5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
       "name": "exitcube",
       "mesh": 29,
       "aabb": {
@@ -1243,6 +1342,567 @@
       ]
     },
     {
+      "type": "object",
+      "name": "tree",
+      "mesh": 33,
+      "texture": 5,
+      "aabb": {
+        "min": [
+          -1,
+          -1,
+          -1
+        ],
+        "max": [
+          1,
+          1,
+          1
+        ]
+      },
+      "translation": [
+        -14,
+        0,
+        -19.5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "type": "object",
+      "name": "tree",
+      "mesh": 33,
+      "texture": 5,
+      "aabb": {
+        "min": [
+          -1,
+          -1,
+          -1
+        ],
+        "max": [
+          1,
+          1,
+          1
+        ]
+      },
+      "translation": [
+        -24,
+        0,
+        -15
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "type": "object",
+      "name": "tree",
+      "mesh": 33,
+      "texture": 5,
+      "aabb": {
+        "min": [
+          -1,
+          -1,
+          -1
+        ],
+        "max": [
+          1,
+          1,
+          1
+        ]
+      },
+      "translation": [
+        -24,
+        0,
+        -5
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "type": "object",
+      "name": "tree",
+      "mesh": 33,
+      "texture": 5,
+      "aabb": {
+        "min": [
+          -1,
+          -1,
+          -1
+        ],
+        "max": [
+          1,
+          1,
+          1
+        ]
+      },
+      "translation": [
+        -24,
+        0,
+        4
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "type": "object",
+      "name": "tree",
+      "mesh": 33,
+      "texture": 5,
+      "aabb": {
+        "min": [
+          -1,
+          -1,
+          -1
+        ],
+        "max": [
+          1,
+          1,
+          1
+        ]
+      },
+      "translation": [
+        -24,
+        0,
+        12
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "type": "object",
+      "name": "tree",
+      "mesh": 33,
+      "texture": 5,
+      "aabb": {
+        "min": [
+          -1,
+          -1,
+          -1
+        ],
+        "max": [
+          1,
+          1,
+          1
+        ]
+      },
+      "translation": [
+        -24,
+        0,
+        19
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "type": "object",
+      "name": "tree",
+      "mesh": 33,
+      "texture": 5,
+      "aabb": {
+        "min": [
+          -1,
+          -1,
+          -1
+        ],
+        "max": [
+          1,
+          1,
+          1
+        ]
+      },
+      "translation": [
+        -19,
+        0,
+        27
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "type": "object",
+      "name": "tree",
+      "mesh": 33,
+      "texture": 5,
+      "aabb": {
+        "min": [
+          -1,
+          -1,
+          -1
+        ],
+        "max": [
+          1,
+          1,
+          1
+        ]
+      },
+      "translation": [
+        -10,
+        0,
+        27
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "type": "object",
+      "name": "tree",
+      "mesh": 33,
+      "texture": 5,
+      "aabb": {
+        "min": [
+          -1,
+          -1,
+          -1
+        ],
+        "max": [
+          1,
+          1,
+          1
+        ]
+      },
+      "translation": [
+        2,
+        0,
+        27
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "type": "object",
+      "name": "tree",
+      "mesh": 33,
+      "texture": 5,
+      "aabb": {
+        "min": [
+          -1,
+          -1,
+          -1
+        ],
+        "max": [
+          1,
+          1,
+          1
+        ]
+      },
+      "translation": [
+        12,
+        0,
+        27
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "type": "object",
+      "name": "tree",
+      "mesh": 33,
+      "texture": 5,
+      "aabb": {
+        "min": [
+          -1,
+          -1,
+          -1
+        ],
+        "max": [
+          1,
+          1,
+          1
+        ]
+      },
+      "translation": [
+        19,
+        0,
+        27
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "type": "object",
+      "name": "tree",
+      "mesh": 33,
+      "texture": 5,
+      "aabb": {
+        "min": [
+          -1,
+          -1,
+          -1
+        ],
+        "max": [
+          1,
+          1,
+          1
+        ]
+      },
+      "translation": [
+        22,
+        0,
+        22
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "type": "object",
+      "name": "tree",
+      "mesh": 33,
+      "texture": 5,
+      "aabb": {
+        "min": [
+          -1,
+          -1,
+          -1
+        ],
+        "max": [
+          1,
+          1,
+          1
+        ]
+      },
+      "translation": [
+        22,
+        0,
+        10
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "type": "object",
+      "name": "tree",
+      "mesh": 33,
+      "texture": 5,
+      "aabb": {
+        "min": [
+          -1,
+          -1,
+          -1
+        ],
+        "max": [
+          1,
+          1,
+          1
+        ]
+      },
+      "translation": [
+        22,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "type": "object",
+      "name": "tree",
+      "mesh": 33,
+      "texture": 5,
+      "aabb": {
+        "min": [
+          -1,
+          -1,
+          -1
+        ],
+        "max": [
+          1,
+          1,
+          1
+        ]
+      },
+      "translation": [
+        22,
+        0,
+        -10
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "type": "object",
+      "name": "tree",
+      "mesh": 33,
+      "texture": 5,
+      "aabb": {
+        "min": [
+          -1,
+          -1,
+          -1
+        ],
+        "max": [
+          1,
+          1,
+          1
+        ]
+      },
+      "translation": [
+        22,
+        0,
+        22
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "type": "object",
+      "name": "grave",
+      "mesh": 34,
+      "texture": 7,
+      "aabb": {
+        "min": [
+          -1,
+          -1,
+          -1
+        ],
+        "max": [
+          1,
+          1,
+          1
+        ]
+      },
+      "translation": [
+        1,
+        0,
+        18
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
       "name": "celadesnastena",
       "mesh": 29,
       "aabb": {
@@ -1260,7 +1920,7 @@
       "translation": [
         22,
         1,
-        5
+        -20
       ],
       "rotation": [
         0,
@@ -2675,7 +3335,9 @@
     "../../common/images/ghost.jpeg",
     "../../common/images/phone.jpeg",
     "../../common/images/stones.png",
-    "../../common/images/brown.jpeg"
+    "../../common/images/tree.jpeg",
+    "../../common/images/door3.jpeg",
+    "../../common/images/grave.jpeg"
   ],
   "meshes": [
     "../../common/models/1.json",
