@@ -184,8 +184,15 @@ class App extends Application {
             document.getElementById("death").style.display = "flex";
         }
 
-        if (this.physics.checkTelefon(dt) == 1) {
-            if (this.dvignjenTelefon == 0) {
+        if (this.dvignjenTelefon == 0 && this.death == 1) {
+            let novDatum = new Date();
+            let noveSekunde = novDatum.getSeconds();
+            let cameraX = this.camera.translation[0];
+            let cameraY = this.camera.translation[2];
+            let telefonX = -2.6;
+            let telefonY = -5.75;
+            let euclid = Math.sqrt(Math.pow(cameraX - telefonX, 2) + Math.pow(cameraY - telefonY, 2));
+            if (euclid < 2 && this.camera.keys['KeyE']) {
                 document.getElementById("jumpscare1").style.display = "block";
                 document.getElementById("wazapzvok").volume = 1;
                 document.getElementById("wazapzvok").play();
