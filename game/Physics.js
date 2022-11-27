@@ -7,6 +7,46 @@ export class Physics {
     constructor(scene) {
         this.scene = scene;
     }
+    
+    checkTelefon(dt) {
+        let colliding = 0;
+        this.scene.traverse(node => {
+            // Move every node with defined velocity.
+            if (node.velocity) {
+                vec3.scaleAndAdd(node.translation, node.translation, node.velocity, dt);
+                node.updateMatrix();
+
+                // After moving, check for collision with every other node.
+                this.scene.traverse(other => {
+                    if (node !== other) {
+                        if (this.collisionTelefon(node, other) == true) {
+                            colliding = 1
+                        }
+                    }
+                });
+            }
+        });
+        return colliding;
+    }
+
+    collisionTelefon(a, b) {
+        // Get global space AABBs.
+        const aBox = this.getTransformedAABB(a);
+        const bBox = this.getTransformedAABB(b);
+
+        // Check if there is collision.
+        const isColliding = this.aabbIntersection(aBox, bBox);
+
+        if (isColliding && b.name == "phone") {
+            if(this.scene.nodes[0].keys['KeyE']){
+                return true;
+            } else {
+                return false;
+            }
+        } else {
+            return false;
+        }
+    }
 
     checkKljuc(dt) {
         let colliding = 0;

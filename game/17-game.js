@@ -25,6 +25,9 @@ class App extends Application {
         this.death = 1;
         this.backSound = Math.floor(Math.random() * 3.99);
         this.zeZaigral = 0;
+        this.dvignjenTelefon = 0;
+        this.datum = new Date();
+        this.sekunde = this.datum.getSeconds();
 
         // jers
         this.collisionGhost = 0;
@@ -34,19 +37,19 @@ class App extends Application {
         this.canvas.addEventListener('click', e => this.canvas.requestPointerLock());
         document.addEventListener('pointerlockchange', e => {
             if(this.backSound == 0 && this.zeZaigral == 0){
-                document.getElementById("back1").volume = 0.3;
+                document.getElementById("back1").volume = 0.15;
                 document.getElementById("back1").play();
                 this.zeZaigral = 1;
             } else if(this.backSound == 1 && this.zeZaigral == 0){
-                document.getElementById("back2").volume = 0.3;
+                document.getElementById("back2").volume = 0.15;
                 document.getElementById("back2").play();
                 this.zeZaigral = 1;
             } else if(this.backSound == 2 && this.zeZaigral == 0){
-                document.getElementById("back3").volume = 0.3;
+                document.getElementById("back3").volume = 0.15;
                 document.getElementById("back3").play();
                 this.zeZaigral = 1;
             } else if(this.backSound == 3 && this.zeZaigral == 0){
-                document.getElementById("back4").volume = 0.3;
+                document.getElementById("back4").volume = 0.15;
                 document.getElementById("back4").play();
                 this.zeZaigral = 1;
             }
@@ -56,6 +59,7 @@ class App extends Application {
                 this.camera.disable();
             }
         });
+
     }
 
     async load(uri) {
@@ -179,6 +183,34 @@ class App extends Application {
             }
             document.getElementById("death").style.display = "block";
         }
+
+        if (this.physics.checkTelefon(dt) == 1) {
+            if (this.dvignjenTelefon == 0) {
+                document.getElementById("jumpscare1").style.display = "block";
+                document.getElementById("wazapzvok").volume = 1;
+                document.getElementById("wazapzvok").play();
+                setTimeout(function () {
+                    document.getElementById("jumpscare1").style.display = "none";
+                }, 2000)
+                this.dvignjenTelefon = 1;
+            }
+        }
+
+        if(this.dvignjenTelefon == 0){
+            let novDatum = new Date();
+            let noveSekunde = novDatum.getSeconds();
+            if(Math.abs(this.sekunde - noveSekunde) == 5){
+                let cameraX = this.camera.translation[0];
+                let cameraY = this.camera.translation[2];
+                let telefonX = -2.6;
+                let telefonY = -5.75;
+                let euclid = Math.sqrt(Math.pow(cameraX - telefonX, 2) + Math.pow(cameraY - telefonY, 2));
+                let normaliziran = Math.abs(euclid / 34 - 1);
+                document.getElementById("telefon").volume = normaliziran;
+                document.getElementById("telefon").play();
+                this.sekunde = noveSekunde;
+            }
+        }
     }
 
     render() {
@@ -194,7 +226,6 @@ class App extends Application {
             this.camera.updateProjection();
         }
     }
-
 }
 
 const canvas = document.querySelector('canvas');
